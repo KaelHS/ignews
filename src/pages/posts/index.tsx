@@ -27,7 +27,7 @@ export default function Posts( props: PostsProps ) {
             <div className={styles.posts}>
 
                 { props.posts.map ( post => (
-                    <Link href={`/posts/${post.slug}`}><a  key={post.slug} >
+                    <Link key={post.slug} href={`/posts/${post.slug}`}><a  key={post.slug} >
                         <time> { post.updatedAt } </time>
                         <strong> { post.title } </strong>
                         <p> { post.excerpt } </p>
